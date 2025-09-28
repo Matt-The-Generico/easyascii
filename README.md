@@ -58,11 +58,11 @@ Creating a rich console output is simple. Just import the functions you need and
 ### 3. Display data in a table
 ``user_data = [``
 
-    {"ID": 1, "Username": "alex", "Status": "Active"},
+``    {"ID": 1, "Username": "alex", "Status": "Active"},``
     
-    {"ID": 2, "Username": "brian_the_dev", "Status": "Active"},
+``    {"ID": 2, "Username": "brian_the_dev", "Status": "Active"},``
     
-    {"ID": 3, "Username": "casey", "Status": "Inactive"},
+``    {"ID": 3, "Username": "casey", "Status": "Inactive"},``
     
 ``]``
 
