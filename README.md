@@ -118,7 +118,7 @@ columns()
 
 tree()
 
-### Dynamic UI Functions
+## Dynamic UI Functions
 
 progress_bar()
 
@@ -133,7 +133,7 @@ For every function that returns a string (like box, table, etc.), there is a cor
 ## Display Functions
 
 
-box()
+***box()***
 
 
 Creates a string of text inside an ASCII box.
@@ -195,7 +195,7 @@ Output:
 
 
 
-table()
+***table()***
 
 
 Creates a formatted ASCII table from a list of dictionaries.
@@ -262,7 +262,7 @@ Output:
 
 
 
-banner()
+***banner()***
 
 
 Renders large ASCII text.
@@ -290,7 +290,7 @@ Output:
 
 
 
-hr()
+***hr()***
 
 Creates a horizontal rule (a line separator).
 
@@ -339,7 +339,7 @@ Output:
 ``    3. Write tests``
 
 
-columns()
+***columns()***
 
 
 Arranges a list of strings into multiple columns.
@@ -367,7 +367,7 @@ Output:
 ``Date``
 
 
-tree()
+***tree()***
 
 
 Generates an ASCII tree structure from a nested dictionary.
@@ -415,7 +415,7 @@ Output:
 ## Dynamic UI Functions
 
 
-progress_bar()
+***progress_bar()***
 
 
 Prints a dynamic, single-line progress bar. Should be called inside a loop.
@@ -462,6 +462,7 @@ Example:
 
 ## Spinner
 A context manager for displaying a loading spinner for long operations.
+
 Signature:
 
 ``class Spinner:``
