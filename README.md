@@ -31,7 +31,7 @@
 
 Install `easyascii` directly from PyPI:
 
-`pip install easyascii-py==1.0.2`
+`pip install easyascii-py==1.0.3`
 
 
 ### 🚀 Quick Start
