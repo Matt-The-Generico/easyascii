@@ -51,7 +51,7 @@ easyascii.print_box(
 )
 
 ### 3. Display data in a table
-user_data = [
+``user_data = [``
 
     {"ID": 1, "Username": "alex", "Status": "Active"},
     
@@ -59,9 +59,9 @@ user_data = [
     
     {"ID": 3, "Username": "casey", "Status": "Inactive"},
     
-]
+``]``
 
-easyascii.print_table(user_data, style="double", align={"ID": "center"})
+``easyascii.print_table(user_data, style="double", align={"ID": "center"})``
 
 
 Output:
@@ -343,6 +343,7 @@ Output:
 
 
 Arranges a list of strings into multiple columns.
+
 Signature:
 
 
@@ -419,6 +420,7 @@ Output:
 
 
 Prints a dynamic, single-line progress bar. Should be called inside a loop.
+
 Signature:
 
 ``def progress_bar(``
