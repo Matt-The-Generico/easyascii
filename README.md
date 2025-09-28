@@ -34,23 +34,23 @@ Install `easyascii` directly from PyPI:
 `pip install easyascii-py==1.0.3`
 
 
-### 🚀 Quick Start
+## 🚀 Quick Start
 Creating a rich console output is simple. Just import the functions you need and call them.
 
 
 import easyascii
 
-# 1. Create a banner for your application
+### 1. Create a banner for your application
 easyascii.print_banner("My App")
 
-# 2. Create a styled box for a welcome message
+### 2. Create a styled box for a welcome message
 easyascii.print_box(
     "Welcome to my awesome application!\nHere is some important information.",
     title="Info",
     style="rounded"
 )
 
-# 3. Display data in a table
+### 3. Display data in a table
 user_data = [
 
     {"ID": 1, "Username": "alex", "Status": "Active"},
@@ -102,7 +102,7 @@ Output:
 📚 API Reference
 Convenience print_* Wrappers
 
-### Display Functions
+## Display Functions
 
 box()
 
@@ -123,7 +123,7 @@ tree()
 progress_bar()
 
 
-### Spinner
+## Spinner
 
 Convenience print_
 
