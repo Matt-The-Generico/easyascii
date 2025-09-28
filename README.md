@@ -1,8 +1,7 @@
 # Easy ASCII
 ## A comprehensive, single-file, zero-dependency Python library for creating beautiful and functional text-based user interfaces and ASCII art.
 
-[![PyPI version](https://badge.fury.io/py/easyascii.svg)](https://badge.fury.io/py/easyascii)
-[![Python Versions](https://img.shields.io/pypi/pyversions/easyascii.svg)](https://pypi.org/project/easyascii/)
+[![PyPI version] (https://pypi.org/project/easyascii-py/1.0.2/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ### Easy ASCII is designed to be incredibly simple to use while providing a powerful set of tools for command-line applications. Whether you need to display data in a clean table, create an eye-catching banner, or show progress for a long-running task, this library has you covered.
@@ -32,11 +31,7 @@
 
 Install `easyascii` directly from PyPI:
 
-`pip install easyascii`
-
-To get the latest version, you can upgrade with:
-
-`pip install --upgrade easyascii`
+`pip install easyascii-py==1.0.2`
 
 
 ### 🚀 Quick Start
