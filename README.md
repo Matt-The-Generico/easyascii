@@ -130,7 +130,7 @@ progress_bar()
 
 ## Spinner
 
-Convenience print_
+spinner()
 
 For every function that returns a string (like box, table, etc.), there is a corresponding "print_" version (e.g., print_box) that prints the result directly to the console. The "print_" versions accept the exact same arguments.
 
