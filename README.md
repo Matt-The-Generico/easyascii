@@ -38,17 +38,17 @@ Install `easyascii` directly from PyPI:
 Creating a rich console output is simple. Just import the functions you need and call them.
 
 
-import easyascii
+``import easyascii``
 
 ### 1. Create a banner for your application
-easyascii.print_banner("My App")
+``easyascii.print_banner("My App")``
 
 ### 2. Create a styled box for a welcome message
-easyascii.print_box(
-    "Welcome to my awesome application!\nHere is some important information.",
-    title="Info",
-    style="rounded"
-)
+``easyascii.print_box(``
+``    "Welcome to my awesome application!\nHere is some important information.",``
+``    title="Info",``
+``    style="rounded"``
+``)``
 
 ### 3. Display data in a table
 ``user_data = [``
