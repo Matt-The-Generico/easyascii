@@ -45,10 +45,15 @@ Creating a rich console output is simple. Just import the functions you need and
 
 ### 2. Create a styled box for a welcome message
 ``easyascii.print_box(``
+
 ``    "Welcome to my awesome application!\nHere is some important information.",``
+
 ``    title="Info",``
+
 ``    style="rounded"``
+
 ``)``
+
 
 ### 3. Display data in a table
 ``user_data = [``
