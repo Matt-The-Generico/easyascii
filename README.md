@@ -8,23 +8,31 @@
 
 ## ✨ Key Features
 
-*   **📦 Advanced Boxes**: Create boxes with multiple border styles, titles, and text alignment.
+* 📦 Advanced Boxes: Create boxes with multiple border styles, titles, and text alignment.
 
-*   **📊 Data Tables**: Generate perfectly formatted tables from lists of dictionaries with text wrapping.
+* 🔔 Alerts: Display styled info, success, warning, and error messages.
 
-*   **🅰️ FIGlet Banners**: Render large ASCII text banners with a built-in font.
+* 📊 Data Tables: Generate perfectly formatted tables from lists of dictionaries with text wrapping.
 
-*   **⏳ Progress Bars & Spinners**: Provide user feedback for long-running tasks.
+* 📈 Charts: Create simple horizontal bar charts and compact sparklines (▂▄▇).
 
-*   **🌳 Tree Structures**: Visualize hierarchical data like file systems.
+* ✅ Checklists: Show the status of tasks with [x] and [ ] boxes.
 
-*   **🏛️ Multi-Column Layouts**: Arrange text into clean, evenly spaced columns.
+* 🎚️ Gauges: Display static progress or stats with meter bars.
 
-*   **📝 Lists & Rules**: Create ordered/unordered lists and customizable horizontal rules.
+* 🅰️ FIGlet Banners: Render large ASCII text banners with a built-in font.
 
-*   **🐍 Pure Python**: Single file with zero external dependencies.
+* ⏳ Progress Bars & Spinners: Provide dynamic user feedback with updatable text and new styles.
 
-*   **💡 Developer Friendly**: Fully type-hinted with extensive docstrings and a flexible API.
+* 🌳 Tree Structures: Visualize hierarchical data like file systems.
+
+* 🏛️ Multi-Column Layouts: Arrange text into clean, evenly spaced columns.
+
+* 📝 Lists & Rules: Create ordered/unordered lists and customizable horizontal rules.
+
+* 🐍 Pure Python: Single file with zero external dependencies.
+
+* 💡 Developer Friendly: Fully type-hinted with extensive docstrings and a flexible API.
 
 
 ## 📦 Installation
@@ -33,473 +41,225 @@ Install `easyascii` directly from PyPI:
 
 `pip install easyascii-py==1.0.3`
 
+---
 
-## 🚀 Quick Start
-Creating a rich console output is simple. Just import the functions you need and call them.
+## Quick Start
 
+### 1. Creating Boxes
 
-``import easyascii``
+The ``box`` function creates ASCII text boxes with customizable borders, alignment, padding, and optional titles.
 
-### 1. Create a banner for your application
-``easyascii.print_banner("My App")``
+``from easyascii import box, print_box``
 
-### 2. Create a styled box for a welcome message
-``easyascii.print_box(``
+``print_box("Hello World!", style="light", title="My Box", align="center", padding=1)``
 
-``    "Welcome to my awesome application!\nHere is some important information.",``
+- ``style``: light, heavy, double, rounded, star, hash, plus, dots  
+- ``align``: left, center, right  
+- ``padding``: int or (horizontal, vertical)  
+- ``title``: optional box title
 
-``    title="Info",``
+---
 
-``    style="rounded"``
+### 2. Pre-styled Alerts
 
-``)``
+``alert`` creates pre-styled alert messages:
 
+``from easyascii import alert, print_alert``
 
-### 3. Display data in a table
-``user_data = [``
+``print_alert("This is an info message.", alert_type="info")``
+``print_alert("Operation successful!", alert_type="success")``
+``print_alert("Be careful!", alert_type="warning")``
+``print_alert("Something went wrong!", alert_type="error")``
 
-``    {"ID": 1, "Username": "alex", "Status": "Active"},``
-    
-``    {"ID": 2, "Username": "brian_the_dev", "Status": "Active"},``
-    
-``    {"ID": 3, "Username": "casey", "Status": "Inactive"},``
-    
-``]``
+---
 
-``easyascii.print_table(user_data, style="double", align={"ID": "center"})``
+### 3. ASCII Tables
 
+``table`` generates tables from lists of dictionaries.
 
-Output:
+``from easyascii import table, print_table``
 
-`#   # #   #        ###  ####  ####`
+``data = [{"ID": 1, "Name": "Python", "Type": "Programming Language"}, {"ID": 2, "Name": "JavaScript", "Type": "Scripting Language"}]``
 
-`## ##  # #        #   # #   # #   #`
+``print_table(data, style="double", align={"ID": "center", "Name": "left"})``
 
-`# # #   #         ##### ####  ####`
+- ``headers``: optional list of column names  
+- ``align``: string or dict per column  
+- ``max_col_width``: maximum width per column
 
-`#   #   #         #   # #     #`
+---
 
-`#   #   #         #   # #     #`
+### 4. ASCII Banners
 
+``banner`` generates large text banners in ASCII style:
 
-``╭──────────────── Info ─────────────────╮``
+``from easyascii import banner, print_banner``
 
-``│ Welcome to my awesome application!    │``
+``print_banner("EASY ASCII")``
 
-``│ Here is some important information.   │``
+- Default font is ``SIMPLE_FONT``  
+- All characters are converted to uppercase
 
-``╰───────────────────────────────────────╯``
+---
 
-``╔════╦═══════════════╦══════════╗``
+### 5. Gauge / Progress Bar
 
-``║ ID ║ Username      ║ Status   ║``
+``from easyascii import gauge, print_gauge``
 
-``╠════╬═══════════════╬══════════╣``
+``print_gauge(75, total=100, label="Progress")``
 
-``║  1 ║ alex          ║ Active   ║``
+- ``value``: current value  
+- ``total``: maximum value  
+- ``length``: bar length  
+- ``fill`` / ``background``: characters for fill and background
 
-``║  2 ║ brian_the_dev ║ Active   ║``
+---
 
-``║  3 ║ casey         ║ Inactive ║``
+### 6. Sparkline Charts
 
-``╚════╩═══════════════╩══════════╝``
+``from easyascii import sparkline, print_sparkline``
 
-📚 API Reference
-Convenience print_* Wrappers
+``print_sparkline([1, 5, 2, 8, 3])``
 
-## Display Functions
+- Automatically normalizes values  
+- Uses characters ``▂▃▄▅▆▇█``
 
-box()
+---
 
-table()
+### 7. Bar Charts
 
-banner()
+``from easyascii import bar_chart, print_bar_chart``
 
-hr()
+``data = {"Python": 75, "JavaScript": 50, "C++": 25}``
 
-listing()
+``print_bar_chart(data, max_bar_length=30, title="Languages")``
 
-columns()
+- ``max_bar_length``: max bar length  
+- ``fill``: character for bar fill  
+- ``title``: optional title
 
-tree()
+---
 
-## Dynamic UI Functions
+### 8. Horizontal Rules
 
-progress_bar()
+``from easyascii import hr, print_hr``
 
+``print_hr(char="=", title="SECTION")``
 
-## Spinner
+- ``width``: line width (default terminal width)  
+- ``char``: line character  
+- ``title``: optional centered title
 
-spinner()
+---
 
-For every function that returns a string (like box, table, etc.), there is a corresponding "print_" version (e.g., print_box) that prints the result directly to the console. The "print_" versions accept the exact same arguments.
+### 9. Lists & Checklists
 
+- Ordered or unordered lists:
 
-## Display Functions
+``from easyascii import listing, print_listing``
 
+``print_listing(["Item 1", "Item 2", "Item 3"], ordered=True)``
 
-***box()***
+- Checklists with status:
 
+``from easyascii import checklist, print_checklist``
 
-Creates a string of text inside an ASCII box.
+``tasks = [("Buy milk", True), ("Send email", False)]``
 
-Signature:
+``print_checklist(tasks)``
 
+---
 
-``def box(``
-    ``text: Any,``
-	
-    style: str = "light",
-	
-    width: Optional[int] = None,
-	
-    title: str = "",
-	
-    align: str = "left",
-	
-    padding: Union[int, Tuple[int, int]] = 1
-	
-``) -> str``
+### 10. Columns
 
+``from easyascii import columns, print_columns``
 
-**Parameters:**
+``texts = ["Column 1 content", "Column 2 content", "Column 3 content"]``
 
-text (Any): The text content to display. Can be multi-line.
+``print_columns(texts, num_cols=3)``
 
-style (str): The border style. Available: "light", "heavy", "double", "rounded", "star", "hash", "plus".
+- ``num_cols``: number of columns  
+- ``width``: total width  
+- ``spacing``: space between columns
 
-width (Optional[int]): Total width of the box. Auto-calculated if None.
+---
 
-title (str): An optional title to display on the top border.
+### 11. Tree Structures
 
-align (str): Text alignment ("left", "center", "right").
+``from easyascii import tree, print_tree``
 
-padding (Union[int, Tuple[int, int]]): Horizontal and vertical padding. E.g., 1 or (2, 1).
+``data = {"Root": {"Branch1": {"Leaf1": None, "Leaf2": None}, "Branch2": {"Leaf3": None}}}``
 
+``print_tree(data)``
 
-Example:
+- Accepts nested dictionaries  
+- Generates ASCII tree-like visualization
 
+---
 
-``message = "This box is centered and has a heavy border style with custom padding."``
-``print(easyascii.box(message, style="heavy", title="Attention", align="center", padding=(4, 1), width=70))``
+### 12. Dynamic Progress Bar
 
-Output:
-
-
-``┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Attention ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓``
-
-``┃                                                                    ┃``
-
-``┃        This box is centered and has a heavy border style           ┃``
-
-``┃                       with custom padding.                         ┃``
-
-``┃                                                                    ┃``
-
-``┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛``
-
-
-
-***table()***
-
-
-Creates a formatted ASCII table from a list of dictionaries.
-Signature:
-
-
-``def table(``
-    ``data: List[Dict[str, Any]],``
-	
-    headers: Optional[List[str]] = None,
-	
-    style: str = "light",
-	
-    align: Union[str, Dict[str, str]] = "left",
-	
-    max_col_width: Optional[int] = None
-	
-``) -> str``
-
-
-**Parameters:**
-
-data (List[Dict]): A list of dictionaries, where each dict is a row.
-
-headers (Optional[List[str]]): A list of header keys. If None, uses keys from the first row.
-
-style (str): The border style (see box() for options).
-
-align (Union[str, Dict]): Default alignment, or a dictionary mapping header keys to alignments.
-
-max_col_width (Optional[int]): Maximum width for any single column (enables text wrapping).
-
-Example:
-
-
-``data = [``
-    ``{"File": "main.py", "Size (KB)": 12.5, "Last Modified": "2023-10-27"},``
-	
-    {"File": "utils/helpers.py", "Size (KB)": 34.1, "Last Modified": "2023-10-26"},
-	
-    {"File": "README.md", "Size (KB)": 2.8, "Last Modified": "2023-10-27"},
-	
-``]``
-``print(easyascii.table(data, style="light", align={"Size (KB)": "right"}))``
-
-
-Output:
-
-
-``┌──────────────────┬─────────────┬───────────────┐``
-
-``│ File             │ Size (KB)   │ Last Modified │``
-
-``├──────────────────┼─────────────┼───────────────┤``
-
-``│ main.py          │        12.5 │ 2023-10-27    │``
-
-``│ utils/helpers.py │        34.1 │ 2023-10-26    │``
-
-``│ README.md        │         2.8 │ 2023-10-27    │``
-
-``└──────────────────┴─────────────┴───────────────┘``
-
-
-
-
-***banner()***
-
-
-Renders large ASCII text.
-
-Signature:
-
-``def banner(text: str) -> str``
-
-Example:
-
-``print(easyascii.banner("Ready!"))``
-
-
-Output:
-
-``####  #####  ###  ####  #   #   #``
-
-``#   # #     #   # #   #  # #    #``
-
-``####  ###   ##### #   #   #     #``
-
-``# #   #     #   # #   #   #``
-
-``#  #  ##### #   # ####    #     #``
-
-
-
-***hr()***
-
-Creates a horizontal rule (a line separator).
-
-Signature:
-
-
-``def hr(width: Optional[int] = None, char: str = "-", title: str = "") -> str``
-
-Example:
-
-``print(easyascii.hr(width=50, char="=", title="Section Break"))``
-
-Output:
-
-
-``================= Section Break ==================``
-
-
-listing()
-
-
-Formats an iterable into an ordered or unordered list.
-
-Signature:
-
-
-``def listing(items: Iterable[Any], ordered: bool = False, indent: int = 2) -> str``
-
-
-Example:
-
-
-``tasks = ["Design UI", "Implement backend", "Write tests"]``
-
-``print("Todo List:")``
-
-``print(easyascii.listing(tasks, ordered=True, indent=4))``
-
-
-Output:
-
-
-``Todo List:``
-``    1. Design UI``
-``    2. Implement backend``
-``    3. Write tests``
-
-
-***columns()***
-
-
-Arranges a list of strings into multiple columns.
-
-Signature:
-
-
-``def columns(texts: List[str], num_cols: int = 2, spacing: int = 4) -> str``
-Example:
-
-
-``items = ["Apple", "Banana", "Cherry", "Date", "Elderberry", "Fig", "Grape"]``
-
-``print(easyascii.columns(items, num_cols=3, width=50))``
-
-
-Output:
-
-
-``Apple          Elderberry``
-
-``Banana         Fig``
-
-``Cherry         Grape``
-
-``Date``
-
-
-***tree()***
-
-
-Generates an ASCII tree structure from a nested dictionary.
-
-Signature:
-
-
-``def tree(data: Dict[str, Any]) -> str``
-
-
-Example:
-
-
-``file_system = {``
-
-``    "project/": {``
-
-``        "src/": {``
-
-``            "main.py": None,``
-
-``            "utils.py": None``
-
-``        },``
-
-``        "README.md": None``
-
-``    }``
-
-``}``
-
-``print(easyascii.tree(file_system))``
-
-
-Output:
-
-
-``└── project/``
-``    ├── src/``
-``    │   ├── main.py``
-``    │   └── utils.py``
-``    └── README.md``
-	
-	
-## Dynamic UI Functions
-
-
-***progress_bar()***
-
-
-Prints a dynamic, single-line progress bar. Should be called inside a loop.
-
-Signature:
-
-``def progress_bar(``
-
-``    iteration: int,``
-
-``    total: int,``
-
-``    prefix: str = 'Progress:',``
-
-``    suffix: str = 'Complete',``
-
-``    length: int = 50,``
-
-``    fill: str = '█'``
-
-``)``
-
-
-Example:
-
-
+``from easyascii import progress_bar``
 ``import time``
 
-``import easyascii``
+``for i in range(101):``  
+``    progress_bar(i, 100, prefix="Loading")``  
+``    time.sleep(0.05)``
 
+- Updates in real-time  
+- ``prefix`` and ``suffix`` optional
 
-``total_items = 200``
+---
 
-``for i in range(total_items + 1):``
+### 13. Loading Spinner
 
-``    easyascii.progress_bar(i, total_items, prefix='Processing:', suffix='Done')``
-    
-``    time.sleep(0.01)``
-    
-``Output (at the end of the loop):``
-
-
-``Processing: |██████████████████████████████████████████████████| 100.0% Done``
-
-
-## Spinner
-A context manager for displaying a loading spinner for long operations.
-
-Signature:
-
-``class Spinner:``
-``    def __init__(self, text: str = "Loading...", style: str = "dots", delay: float = 0.1)``
-``style (str): The spinner animation style. Available: "dots", "line", "arrow", "box".``
-
-
-Example:
-
+``from easyascii import Spinner``
 ``import time``
 
-``import easyascii``
+``with Spinner("Processing...", style="dots") as s:``  
+``    time.sleep(2)``  
+``    s.update_text("Almost done...")``  
+``    time.sleep(2)``
 
-``with easyascii.Spinner("Fetching data from API...", style="arrow"):``
+- Styles: line, dots, arrow, box, moon, bounce  
+- Allows dynamic text updates
 
-``    time.sleep(3)``
+---
 
-``print("Data fetched successfully!")``
+## Convenience Print Wrappers
 
-``Output (during execution):``
+For all main functions, there is a direct print wrapper:
 
-``Fetching data from API... ↑  (character rotates)``
+- ``print_box``  
+- ``print_alert``  
+- ``print_table``  
+- ``print_banner``  
+- ``print_gauge``  
+- ``print_sparkline``  
+- ``print_bar_chart``  
+- ``print_hr``  
+- ``print_listing``  
+- ``print_checklist``  
+- ``print_columns``  
+- ``print_tree``
 
-``Output (after completion):``
+---
 
+## Showcase
 
-``Data fetched successfully!``
+Run a full demo:
 
+``from easyascii import showcase``
 
-## 🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
-## 📜 License
-This project is licensed under the MIT License.
+``showcase()``
+
+Displays boxes, tables, charts, lists, banners, spinners, and more in sequence.
+
+---
+
+## Support
+
+- Python 3.6+  
+- Zero external dependencies  
+- Perfect for interactive terminals, scripts, CLI dashboards, and ASCII art
+
