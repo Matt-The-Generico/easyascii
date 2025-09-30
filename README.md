@@ -39,7 +39,7 @@
 
 Install `easyascii` directly from PyPI:
 
-`pip install easyascii-py==1.0.3`
+`pip install easyascii-py==1.1.3`
 
 Or update it if you're using an old version of the library:
 
