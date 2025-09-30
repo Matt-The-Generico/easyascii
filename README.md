@@ -71,8 +71,11 @@ The ``box`` function creates ASCII text boxes with customizable borders, alignme
 ``from easyascii import alert, print_alert``
 
 ``print_alert("This is an info message.", alert_type="info")``
+
 ``print_alert("Operation successful!", alert_type="success")``
+
 ``print_alert("Be careful!", alert_type="warning")``
+
 ``print_alert("Something went wrong!", alert_type="error")``
 
 ---
@@ -234,18 +237,30 @@ The ``box`` function creates ASCII text boxes with customizable borders, alignme
 
 For all main functions, there is a direct print wrapper:
 
-- ``print_box``  
-- ``print_alert``  
-- ``print_table``  
-- ``print_banner``  
-- ``print_gauge``  
-- ``print_sparkline``  
-- ``print_bar_chart``  
-- ``print_hr``  
-- ``print_listing``  
-- ``print_checklist``  
-- ``print_columns``  
+- ``print_box``
+  
+- ``print_alert``
+  
+- ``print_table``
+  
+- ``print_banner``
+  
+- ``print_gauge``
+  
+- ``print_sparkline``
+  
+- ``print_bar_chart``
+  
+- ``print_hr``
+  
+- ``print_listing``
+  
+- ``print_checklist``
+  
+- ``print_columns``
+  
 - ``print_tree``
+  
 
 ---
 
