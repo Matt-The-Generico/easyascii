@@ -370,7 +370,7 @@ Output:
 
 ``     \/``
 
-[NOTE: THE MAZE COULD NOT BE PREVIEWED IN THE README.md]
+[NOTE: THE MAZE OUTPUT COULD NOT BE PREVIEWED IN THE README, INSTALL EASYASCII AND DISCOVER IT FOR YOURSELF!]
 
 `` /\_/\``
 
@@ -402,6 +402,8 @@ Output:
 
 ``    time.sleep(0.02)``  
 
+[NOTE: INSTALL EASYASCII NOW AND SEE THE OUTPUT FOR YOURSELF!]
+
 #### Spinner
 
 ``import time, easyascii``  
@@ -417,17 +419,21 @@ Output:
 
 Output during execution:
 
-``Finalizing... (  .. )``  
+``Finalizing... (  .. )``  [There is animation]
 
 #### typewriter()
 
 ``easyascii.typewriter("Hello, world...", delay=0.05)``  
+
+[NOTE: INSTALL EASYASCII NOW AND SEE THE OUTPUT FOR YOURSELF!]
 
 #### timer() / clock()
 
 ``easyascii.timer(5)``  
 
 ``easyascii.clock()``  
+
+[NOTE: INSTALL EASYASCII NOW AND SEE THE OUTPUT FOR YOURSELF!]
 
 #### scroll(), rain(), fireworks()
 
@@ -437,6 +443,7 @@ Output during execution:
 
 ``easyascii.fireworks(duration=5)``  
 
+[NOTE: INSTALL EASYASCII NOW AND SEE THE OUTPUT FOR YOURSELF!]
 
 ---
 
