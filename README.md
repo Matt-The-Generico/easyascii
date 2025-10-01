@@ -174,7 +174,7 @@ Create a box or a pre-styled alert.
 ``easyascii.print_alert("Operation failed!", alert_type="error")``  
 
 
-Example Output:
+Output:
 
 ``╭────── Info ──────╮``  
 
