@@ -350,6 +350,9 @@ Output ASCII banner:
 ``####  ###  #   # #####``  
 
 
+[NOTE: INSTALL EASYASCII NOW AND SEE THE OUTPUT FOR YOURSELF!]
+
+
 #### bubble(), cat(), maze()
 
 ``easyascii.print_bubble("Hello there!")``  
