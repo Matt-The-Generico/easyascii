@@ -465,7 +465,9 @@ Displays boxes, tables, charts, lists, banners, spinners, and more in sequence.
 - Python 3.6+  
 - Zero external dependencies  
 - Perfect for interactive terminals, scripts, CLI dashboards, and ASCII art
-- Internal dependencies: shutil;
+- Internal dependencies:
+
+shutil;
 
 sys;
 
