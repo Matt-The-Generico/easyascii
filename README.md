@@ -426,6 +426,8 @@ Output:
 
 #### Spinner
 
+There are 5 styles for the spinner: line, dots, arrow, moon, bounce.
+
 ``import time, easyascii``  
 
 ``with easyascii.Spinner("Processing...", style="moon") as s:``  
@@ -505,8 +507,6 @@ from datetime: datetime;
 math;
 
 calendar (as cal_module inside the easyascii source code)
-
----
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page or create a PR.
