@@ -183,6 +183,10 @@ This library provides two ways to use most functions:
 
 Create a box or a pre-styled alert.
 
+There are 8 styles for the box: light, heavy, double, rounded, star, hash, plus and dots.
+
+There are 4 types of alert: sucess, info, error and warning.
+
 ``easyascii.print_box("A message.", title="Info", style="rounded", align="center")``  
 
 ``easyascii.print_alert("Operation failed!", alert_type="error")``  
@@ -207,6 +211,8 @@ Output:
 #### table()
 
 Display a list of dictionaries as a formatted table.
+
+There are 8 styles for the table: light, heavy, double, rounded, star, hash, plus and dots.
 
 ``data = [{"ID": 1, "Name": "A"}, {"ID": 2, "Name": "B"}]``  
 
@@ -364,7 +370,7 @@ Output ASCII banner:
 ``####  ###  #   # #####``  
 
 
-[NOTE: INSTALL EASYASCII NOW AND SEE THE OUTPUT FOR YOURSELF!]
+[NOTE: INSTALL EASYASCII NOW AND SEE THE DAY BANNER OUTPUT FOR YOURSELF!]
 
 
 #### bubble(), cat(), maze()
