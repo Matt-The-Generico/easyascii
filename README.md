@@ -13,6 +13,7 @@
 
 [PyPI Easy ASCII Link](https://pypi.org/project/easyascii-py/1.4.0/) -  
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[Easy ASCII Official Website](https://easyascii-py.netlify.app)
 
 ### Easy ASCII is designed to be incredibly simple to use while providing a powerful set of tools for command-line applications. Whether you need to display data in a clean table, create an eye-catching banner, or show progress for a long-running task, this library has you covered.
 
