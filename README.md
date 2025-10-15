@@ -367,7 +367,7 @@ Output ASCII banner:
 ``####  ###  #   # #####``  
 
 
-[NOTE: INSTALL EASYASCII NOW AND SEE THE DAY BANNER OUTPUT FOR YOURSELF!]
+[NOTE: INSTALL EASYASCII NOW AND SEE THE DAY_BANNER OUTPUT FOR YOURSELF!]
 
 
 #### bubble(), cat(), maze()
@@ -390,7 +390,7 @@ Output:
 
 ``     \/``
 
-[NOTE: THE MAZE OUTPUT COULD NOT BE PREVIEWED IN THE README, INSTALL EASYASCII AND DISCOVER IT FOR YOURSELF!]
+[NOTE: INSTALL EASYASCII AND SEE THE MAZE OUTPUT FOR YOURSELF!]
 
 `` /\_/\``
 
@@ -399,7 +399,24 @@ Output:
 `` >   <``
 
 
+#### calendar()
 
+``easyascii.print_calendar()``
+
+Output:
+```
++---- October 2025 ----+
+|                      |
+| October 2025         |
+| Mo Tu We Th Fr Sa Su |
+| 1  2  3  4  5        |
+| 6  7  8  9 10 11 12  |
+| 13 14 15 16 17 18 19 |
+| 20 21 22 23 24 25 26 |
+| 27 28 29 30 31       |
+|                      |
++----------------------+
+```
 #### timestamp()
 
 ``easyascii.print_timestamp("Process complete.")``  
