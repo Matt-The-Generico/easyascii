@@ -502,28 +502,27 @@ Displays boxes, tables, charts, lists, banners, spinners, and more in sequence.
 - Zero external dependencies  
 - Perfect for interactive terminals, scripts, CLI dashboards, and ASCII art
 - Internal dependencies:
+   - `shutil;`
 
-shutil;
+   - `sys;`
 
-sys;
+   - `time;`
 
-time;
+   - `threading;`
 
-threading;
+   - `itertools;`
 
-itertools;
+   - `from typing: List, Dict, Any, Optional, Union, Tuple, Iterable;`
 
-from typing: List, Dict, Any, Optional, Union, Tuple, Iterable;
+   - `random;`
 
-random;
+   - `os;`
 
-os;
+   - `from datetime: datetime;`
 
-from datetime: datetime;
+   - `math;`
 
-math;
-
-calendar (as cal_module inside the easyascii source code)
+   - `calendar (as cal_module inside the easyascii source code)`
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page or create a PR.
