@@ -182,7 +182,7 @@ Create a box or a pre-styled alert.
 
 There are 8 styles for the box: light, heavy, double, rounded, star, hash, plus and dots.
 
-There are 4 types of alert: sucess, info, error and warning.
+There are 4 types of alert: success, info, error and warning.
 
 ``easyascii.print_box("A message.", title="Info", style="rounded", align="center")``  
 
